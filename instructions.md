@@ -1,3 +1,5 @@
+## Usage instructions
+
 1. Register provider inside `start/app.js` file.
 const providers = [
   'serviceo-auth/providers/ServiceoAuthProvider'

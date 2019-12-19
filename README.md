@@ -1,6 +1,6 @@
 # serviceo-auth
 
-Auth0 authentication for serviceo applications.
+It handles `Auth0` authentication for service microservices.
 
 
 ## Usage instructions

@@ -2,7 +2,7 @@
 
 const { ServiceProvider } = require('@adonisjs/fold')
 
-class ServiceoAuth0Provider extends ServiceProvider {
+class ServiceoAuthProvider extends ServiceProvider {
   /**
    * Register namespaces to the IoC container
    *
@@ -11,9 +11,9 @@ class ServiceoAuth0Provider extends ServiceProvider {
    * @return {void}
    */
   register() {
-    this.app.singleton('Serviceo/Auth0Middleware', () => {
+    this.app.singleton('Serviceo/Middleware/Auth', () => {
       const Config = this.app.use('Adonis/Src/Config')
-      const ServiceoCore = require('../src/ServiceoAuth0')
+      const ServiceoCore = require('../src/ServiceoAuth')
       return new ServiceoCore(Config)
     })
   }
@@ -31,4 +31,4 @@ class ServiceoAuth0Provider extends ServiceProvider {
   }
 }
 
-module.exports = ServiceoAuth0Provider
+module.exports = ServiceoAuthProvider
